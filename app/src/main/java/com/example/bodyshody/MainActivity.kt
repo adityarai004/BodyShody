@@ -1,5 +1,6 @@
 package com.example.bodyshody
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
@@ -13,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         startLl = findViewById(R.id.startLl)
         startLl.setOnClickListener{
             Toast.makeText(this,"Exercise will start soon!!",Toast.LENGTH_SHORT).show()
+            val i:Intent = Intent(this,ExerciseActivity::class.java)
+            startActivity(i)
         }
     }
 }
